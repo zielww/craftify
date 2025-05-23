@@ -36,7 +36,7 @@
             </a>
         </div>
         <p class="mt-8 text-center text-base text-gray-400">
-            &copy; 2023 Crochet Companion. All rights reserved.
+            &copy; {{ \Carbon\Carbon::now()->year }} Craftify. All rights reserved.
         </p>
     </div>
 </footer>

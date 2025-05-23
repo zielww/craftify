@@ -1,4 +1,4 @@
-<p align="center"><a href="https://craftify.com" target="_blank"><img src="public/images/logo.png" width="400" alt="craftify logo"></a></p>
+<p align="center"><a href="https://craftify.com" target="_blank"><img src="public/images/logo.svg" width="400" alt="craftify logo"></a></p>
 <p align="center">
 <a href=""><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
 <a href=""><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
