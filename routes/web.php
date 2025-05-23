@@ -9,7 +9,7 @@ Route::get('/', function () {
 Route::view('/recommendation', 'recommendation');
 Route::view('/tutorial', 'tutorial');
 Route::get('/project', function () {
-    return 'project-details';
+    return view('project-details');
 });
 
 

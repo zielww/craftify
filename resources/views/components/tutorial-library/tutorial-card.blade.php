@@ -16,7 +16,7 @@
                         <span class="text-sm text-gray-500">
                             <i class="far fa-clock mr-1"></i>{{ $time }}
                         </span>
-            <a href="{{ $url }}" class="text-primary-600 hover:text-primary-500 font-medium text-sm" target="_blank">
+            <a href="/project" class="text-primary-600 hover:text-primary-500 font-medium text-sm">
                 View Tutorial
             </a>
         </div>
