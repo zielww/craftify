@@ -50,9 +50,9 @@
         <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Advanced Techniques</h2>
         <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {{-- Advanced Tutorial Cards--}}
-            <x-tutorial-library.tutorial-card url="#" image_url="" experience="intermediate" title="Tunisian Crochet" description="Learn this unique technique that combines elements of both knitting and crochet." time="25 min"></x-tutorial-library.tutorial-card>
-            <x-tutorial-library.tutorial-card url="#" image_url="" experience="intermediate" title="Overlay Crochet" description="Create stunning textured designs with this advanced technique for mandala patterns." time="30 min"></x-tutorial-library.tutorial-card>
-            <x-tutorial-library.tutorial-card url="#" image_url="" experience="intermediate" title="Broomstick Lace" description="Master this vintage technique that creates beautiful lace-like patterns." time="22 min"></x-tutorial-library.tutorial-card>
+            <x-tutorial-library.tutorial-card url="#" image_url="" experience="advanced" title="Tunisian Crochet" description="Learn this unique technique that combines elements of both knitting and crochet." time="25 min"></x-tutorial-library.tutorial-card>
+            <x-tutorial-library.tutorial-card url="#" image_url="" experience="advanced" title="Overlay Crochet" description="Create stunning textured designs with this advanced technique for mandala patterns." time="30 min"></x-tutorial-library.tutorial-card>
+            <x-tutorial-library.tutorial-card url="#" image_url="" experience="advanced" title="Broomstick Lace" description="Master this vintage technique that creates beautiful lace-like patterns." time="22 min"></x-tutorial-library.tutorial-card>
         </div>
     </div>
 
