@@ -2,7 +2,7 @@
 
 <div class="bg-white overflow-hidden shadow rounded-lg">
     <div class="relative pb-2/3">
-        <img class="h-48 w-full object-cover" src="{{ $image_url }}" alt="{{ $title }}">
+        <img class="h-48 w-full object-cover" src="http://picsum.photos/seed/{{ rand(0, 10000) }}/800 " alt="{{ $title }}">
     </div>
     <div class="px-4 py-5 sm:p-6">
                        <x-featured-project.experience-tag experience="{{ $experience }}">{{ $experience }}</x-featured-project.experience-tag>
