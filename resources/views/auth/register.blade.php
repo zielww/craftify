@@ -3,22 +3,23 @@
         <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
             <div class="px-6 py-8">
                 <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">Create Your Account</h2>
-                <form>
+                <form action="/register" method="POST">
+                    @csrf
                     <div class="mb-6">
                         <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-                        <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-500" placeholder="Enter your name">
+                        <input value="{{ old('name') }}" name="name" type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-500" placeholder="Enter your name">
                     </div>
                     <div class="mb-6">
                         <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-                        <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-500" placeholder="Enter your email">
+                        <input value="{{ old('email') }}" name="email" type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-500" placeholder="Enter your email">
                     </div>
                     <div class="mb-6">
                         <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                        <input type="password" id="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-500" placeholder="Create a password">
+                        <input type="password" name="password" id="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-500" placeholder="Create a password">
                     </div>
                     <div class="mb-6">
-                        <label for="confirm-password" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
-                        <input type="password" id="confirm-password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-500" placeholder="Confirm your password">
+                        <label for="password_confirmation" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
+                        <input type="password" name="password_confirmation" id="password_confirmation" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-500" placeholder="Confirm your password">
                     </div>
                     <div class="flex items-center justify-between mb-6">
                         <div class="flex items-center">
@@ -29,7 +30,7 @@
                         </div>
                     </div>
                     <div class="mb-6">
-                        <button type="button" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                        <button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                             Create Account
                         </button>
                     </div>
