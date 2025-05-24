@@ -1,4 +1,4 @@
-@props(['experience', 'title', 'description', 'url', 'time', 'image_url'])
+@props(['experience', 'url','title', 'description', 'time', 'image_url'])
 
 <div class="bg-white overflow-hidden shadow rounded-lg transition-all duration-300 hover:shadow-xl">
     <div class="relative">
@@ -16,7 +16,7 @@
                         <span class="text-sm text-gray-500">
                             <i class="far fa-clock mr-1"></i>{{ $time }}
                         </span>
-            <a href="/project" class="text-primary-600 hover:text-primary-500 font-medium text-sm">
+            <a href="{{ $url  }}" class="text-primary-600 hover:text-primary-500 font-medium text-sm">
                 View Tutorial
             </a>
         </div>

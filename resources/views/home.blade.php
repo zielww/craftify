@@ -101,5 +101,5 @@
     </div>
 
     <!-- Featured Projects -->
-    @include('components.featured-project.featured-project')
+    <x-featured-project.featured-project :projects="$projects"></x-featured-project.featured-project>
 </x-layouts>
