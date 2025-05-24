@@ -12,4 +12,8 @@ Route::get('/project', function () {
     return view('project-details');
 });
 
+Route::view('/register', 'auth.register');
+Route::view('/login', 'auth.login');
+Route::view('/assessment', 'assessment');
+
 
