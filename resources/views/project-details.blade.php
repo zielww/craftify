@@ -5,7 +5,7 @@
             <div class="lg:col-span-1">
                 <div class="bg-white rounded-lg shadow overflow-hidden">
                     <div class="relative pb-2/3">
-                        <img class="w-full h-auto" src="http://picsum.photos/seed/{{rand(1000,10000)}}/800/500" alt="{{ $project->name  }}">
+                        <img class="w-full h-auto" src="{{ $project->image_url }}" alt="{{ $project->name  }}">
                     </div>
                 </div>
 
