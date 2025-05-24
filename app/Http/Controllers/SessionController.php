@@ -34,6 +34,12 @@ class SessionController extends Controller
 
         request()->session()->regenerate();
 
+        $user = Auth::user()->skill_level;
+
+        if (! $user) {
+            return redirect('/assessment/' . Auth::user()->id . '/edit');
+        }
+
         return redirect('/');
     }
 

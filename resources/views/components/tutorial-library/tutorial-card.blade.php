@@ -2,7 +2,7 @@
 
 <div class="bg-white overflow-hidden shadow rounded-lg transition-all duration-300 hover:shadow-xl">
     <div class="relative">
-        <img class="h-48 w-full object-cover" src="http://picsum.photos/seed/{{ rand(0, 10000) }}/800" alt="">
+        <img class="h-48 w-full object-cover" src="{{ $image_url }}" alt="">
         <div class="absolute top-0 right-0 m-2">
                         <x-tutorial-library.tutorial-tag experience="{{ $experience }}">{{ $experience }}</x-tutorial-library.tutorial-tag>
         </div>

@@ -1,87 +1,70 @@
 <x-layouts>
-    <div class="py-12">
-        <div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-            <div class="px-6 py-8">
-                <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">Determine Your Skill Level</h2>
-                <p class="text-gray-600 mb-6 text-center">Answer a few questions to help us personalize your experience</p>
-
-                <div class="space-y-6">
-                    <!-- Question 1 -->
-                    <div class="bg-primary-50 p-4 rounded-lg">
-                        <h3 class="font-medium text-gray-900 mb-2">1. How long have you been crocheting?</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center">
-                                <input id="q1-a" name="q1" type="radio" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300">
-                                <label for="q1-a" class="ml-3 block text-sm text-gray-700">I'm just starting out</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input id="q1-b" name="q1" type="radio" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300">
-                                <label for="q1-b" class="ml-3 block text-sm text-gray-700">A few months</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input id="q1-c" name="q1" type="radio" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300">
-                                <label for="q1-c" class="ml-3 block text-sm text-gray-700">1-2 years</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input id="q1-d" name="q1" type="radio" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300">
-                                <label for="q1-d" class="ml-3 block text-sm text-gray-700">3+ years</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Question 2 -->
-                    <div class="bg-primary-50 p-4 rounded-lg">
-                        <h3 class="font-medium text-gray-900 mb-2">2. Which stitches are you comfortable with?</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center">
-                                <input id="q2-a" name="q2" type="checkbox" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
-                                <label for="q2-a" class="ml-3 block text-sm text-gray-700">Chain stitch</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input id="q2-b" name="q2" type="checkbox" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
-                                <label for="q2-b" class="ml-3 block text-sm text-gray-700">Single crochet</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input id="q2-c" name="q2" type="checkbox" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
-                                <label for="q2-c" class="ml-3 block text-sm text-gray-700">Double crochet</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input id="q2-d" name="q2" type="checkbox" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
-                                <label for="q2-d" class="ml-3 block text-sm text-gray-700">Complex stitches (popcorn, shell, etc.)</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Question 3 -->
-                    <div class="bg-primary-50 p-4 rounded-lg">
-                        <h3 class="font-medium text-gray-900 mb-2">3. What types of projects have you completed?</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center">
-                                <input id="q3-a" name="q3" type="checkbox" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
-                                <label for="q3-a" class="ml-3 block text-sm text-gray-700">Simple scarves or dishcloths</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input id="q3-b" name="q3" type="checkbox" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
-                                <label for="q3-b" class="ml-3 block text-sm text-gray-700">Hats or simple amigurumi</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input id="q3-c" name="q3" type="checkbox" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
-                                <label for="q3-c" class="ml-3 block text-sm text-gray-700">Blankets or garments</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input id="q3-d" name="q3" type="checkbox" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
-                                <label for="q3-d" class="ml-3 block text-sm text-gray-700">Complex designs with multiple techniques</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-center">
-                        <a href="recommendations.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                            Complete Setup
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="space-y-6 m-20">
+        <div class="text-center mb-8">
+            <h3 class="text-lg font-medium text-gray-900 mb-4">Choose your skill level:</h3>
+            <p class="text-gray-600">Select the option that best describes your crochet experience</p>
         </div>
+
+        <form action="/assessment/{{ $user->id }}" method="POST">
+            @csrf
+            @method('patch')
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-3">
+                <label class="group relative bg-white p-6 border-2 border-gray-200 rounded-lg hover:border-primary-300 focus-within:border-primary-500 transition-all duration-200 hover:shadow-md cursor-pointer">
+                    <input type="radio" name="skill_level" value="beginner" class="sr-only peer">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 peer-checked:bg-green-300 transition-colors">
+                            <i class="fas fa-seedling text-2xl text-green-600"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Beginner</h4>
+                        <p class="text-sm text-gray-600">New to crochet or just learning basic stitches</p>
+                        <ul class="mt-3 text-xs text-gray-500 space-y-1">
+                            <li>• Chain stitch</li>
+                            <li>• Single crochet</li>
+                            <li>• Simple projects</li>
+                        </ul>
+                    </div>
+                </label>
+
+                <label class="group relative bg-white p-6 border-2 border-gray-200 rounded-lg hover:border-primary-300 focus-within:border-primary-500 transition-all duration-200 hover:shadow-md cursor-pointer">
+                    <input type="radio" name="skill_level" value="intermediate" class="sr-only peer">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center group-hover:bg-yellow-200 peer-checked:bg-yellow-300 transition-colors">
+                            <i class="fas fa-star text-2xl text-yellow-600"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Intermediate</h4>
+                        <p class="text-sm text-gray-600">Comfortable with basic stitches and ready for more</p>
+                        <ul class="mt-3 text-xs text-gray-500 space-y-1">
+                            <li>• Double crochet</li>
+                            <li>• Color changes</li>
+                            <li>• Pattern reading</li>
+                        </ul>
+                    </div>
+                </label>
+
+                <label class="group relative bg-white p-6 border-2 border-gray-200 rounded-lg hover:border-primary-300 focus-within:border-primary-500 transition-all duration-200 hover:shadow-md cursor-pointer">
+                    <input type="radio" name="skill_level" value="advanced" class="sr-only peer">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center group-hover:bg-red-200 peer-checked:bg-red-300 transition-colors">
+                            <i class="fas fa-crown text-2xl text-red-600"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Advanced</h4>
+                        <p class="text-sm text-gray-600">Experienced with complex techniques and patterns</p>
+                        <ul class="mt-3 text-xs text-gray-500 space-y-1">
+                            <li>• Complex stitches</li>
+                            <li>• Garment construction</li>
+                            <li>• Advanced techniques</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+
+            <div class="text-center mt-8">
+                <p class="text-sm text-gray-500 mb-4">You can always change your skill level later in your profile settings.</p>
+                <button type="submit" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200">
+                    Continue
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+                </button>
+            </div>
+        </form>
     </div>
 </x-layouts>

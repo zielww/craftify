@@ -28,10 +28,8 @@ class RegisteredUserController extends Controller
             'password' => ['required', Password::min(6)],
         ]);
 
-        $user = User::create($user_attributes);
+        User::create($user_attributes);
 
-        Auth::login($user);
-
-        return redirect('/');
+        return redirect('/login');
     }
 }
